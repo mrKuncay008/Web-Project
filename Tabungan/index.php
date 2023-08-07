@@ -1,3 +1,8 @@
+<?php
+  require 'fungsi.php';
+  $tabung = query("SELECT * FROM tabel");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,30 +15,29 @@
 <table class="table">
   <thead>
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">No</th>
+      <th scope="col">Nabung</th>
+      <th scope="col">Tanggal</th>
+      <th scope="col">Jumlah</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
-    </tr>
+  <?php $i = 1; ?>
+	  	<?php foreach ($Nabung as $tampil) : ?>
+	<tr>
+		<th scope="row"> <?= $i; ?></th>
+			<td>
+				<a href="">Edit</a> / 
+					<a href="" onclick = "return confirm('Apa Yakin Di hapus?');">Delete</a>
+				</td>
+
+			<!-- Main Php -->
+			<td><?= $tampil["Nabung"]; ?></td>
+			<td><?= $tampil["Tanggal"]; ?></td>
+			<td><?= $tampil["Jumlah"]; ?></td>
+	</tr>
+			<?php $i++; ?>
+			<?php endforeach; ?>
   </tbody>
 </table>
 </body>
