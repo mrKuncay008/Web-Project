@@ -6,12 +6,12 @@ function query($query) {
     $select = mysqli_query($conn, $query);
     $rows = [];
     while($show = mysqli_fetch_assoc($select)) {
-        $rows = $show;
+        $rows[] = $show;
     }
     return $rows;
 }
 
-function Nabung($data) {
+function tabung($data) {
     global $conn;
 
     $n= htmlspecialchars($data['Nabung']);
