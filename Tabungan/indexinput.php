@@ -1,3 +1,29 @@
+<?php 
+	require 'fungsi.php';
+	if (isset ($_POST["submit"])) {
+		// add uang masuk
+
+		if (tabung($_POST) > 0) {
+			
+			echo "
+
+				<script>
+					alert('Data Tabungan is Succsess submit');
+				</script>
+			";
+		} else {
+
+			echo "
+
+				<script>
+					alert('Data Failed to add');
+				</script>
+			";
+		}
+	}
+
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,13 +56,13 @@
     <form action="" method="post">
 		
 		<div class="input-group mb-3">
-		  <span class="input-group-text">Nabung</span>
-		  <input type="text" name="Nabung" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="Nabung">
+			<span class="input-group-text" >Tanggal</span>
+			<input type="text" name="Tanggal" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="Tanggal">
 		</div>
-
+		
 		<div class="input-group mb-3">
-		  <span class="input-group-text" >Tanggal</span>
-		  <input type="text" name="Tanggal" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="Tanggal">
+			<span class="input-group-text">Nabung</span>
+			<input type="text" name="Nabung" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="Nabung">
 		</div>
 
 		<div class="input-group mb-3">

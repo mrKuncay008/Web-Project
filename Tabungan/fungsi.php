@@ -17,4 +17,8 @@ function tabung($data) {
     $n= htmlspecialchars($data['Nabung']);
     $t= htmlspecialchars($data['Tanggal']);
     $j= htmlspecialchars($data['Jumlah']);
+    // Query insert data
+		$query = "INSERT INTO tabel VALUES ('0','$n','$t','$j')";
+		mysqli_query($conn,$query);
+		return mysqli_affected_rows($conn); 
 }

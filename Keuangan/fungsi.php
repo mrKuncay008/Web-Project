@@ -77,7 +77,7 @@
 		$query = "INSERT INTO tabungan VALUES ('0','$n4','$j4','$p4')";
 		mysqli_query($connect,$query);
 		return mysqli_affected_rows($connect); 
-	}
+	} 
 
     function del($no){
 
