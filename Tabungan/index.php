@@ -17,7 +17,7 @@
       }
       .btn{
           max-width: 600px; /* Atur lebar maksimal tabel */
-          margin: 25px auto 0;
+          margin: 20px 14%;
       }
     </style>
   </head>
@@ -41,7 +41,7 @@ table-dark table-striped">
 		<th scope="row"> <?= $i; ?></th>
 			<td>
 				<a href="">Edit</a> / 
-				<a href="" onclick = "return confirm('Apa Yakin Di hapus?');">Delete</a>
+				<a href="indexDel.php?No=<?= $show["No"]; ?>" onclick = "return confirm('Apa Yakin Di hapus?');">Delete</a>
 			</td>
 			<!-- Main Php -->
 			<td><?= $show['Nabung']; ?></td>

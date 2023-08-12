@@ -22,3 +22,10 @@ function tabung($data) {
 		mysqli_query($conn,$query);
 		return mysqli_affected_rows($conn); 
 }
+
+function hapus($no) {
+    global $conn;
+
+    mysqli_query($conn, "DELETE FROM tabel WHERE No = $no");
+	return mysqli_affected_rows($conn);
+}
