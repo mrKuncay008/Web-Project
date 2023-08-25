@@ -61,7 +61,6 @@ table-dark table-striped">
         foreach ($tabung as $tampil) {
           $totalJumlah += $tampil['Jumlah'];
       }
-      $totalJumlah += $show['Jumlah']; 
     ?>
     </td>
   </tr>
@@ -74,7 +73,7 @@ table-dark table-striped">
 <script>
   function total() {
     var totalCol = document.getElementById("Total-col");
-    totalCol.innerHTML = "Rp. " + <?= number_format($totalJumlah, 0, ',', '.'); ?>;
+    totalCol.innerHTML = "Rp. <?=number_format($totalJumlah, 0,',','.'); ?>";
   }
 </script>
 </body>
