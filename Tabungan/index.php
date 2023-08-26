@@ -74,12 +74,6 @@ table-dark table-striped">
   function total() {
     var totalCol = document.getElementById("Total-col");
     totalCol.innerHTML = "Rp. <?=number_format($totalJumlah, 0,',','.'); ?>";
-    if (totalCol.style.display === "block") {
-      totalCol.style.display === "none"
-    }
-    else {
-      totalCol.style.display = "none";
-    }
   }
 </script>
 </body>
