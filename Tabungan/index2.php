@@ -50,6 +50,21 @@ table-dark table-striped">
 	</tr>
 			<?php $i++; ?>
 			<?php endforeach; ?>
+  <tfoot>
+  	<tr>
+  		<th colspan="4" style="text-align:right;">
+        <button onclick="total()">Total</button>
+    </th>
+	  <td id="Total-col">
+    <?php 
+      $totalJumlah = 0;
+        foreach ($tabung as $tampil) {
+          $totalJumlah += $tampil['Jumlah'];
+      }
+    ?>
+    </td>
+  </tr>
+  </tfoot>
   </tbody>
    <tfoot>
     <tr>
@@ -66,12 +81,17 @@ table-dark table-striped">
     </tr>
   </tfoot>
 </table>
-
 <pre>
  			<a class="btn btn-primary btn-sm" href="indexinput.php" role="button">Submit Nabung</a>
 </pre>
 <div>
   <marquee> Halloo </marquee>
 </div>
+<script>
+  function total() {
+    var totalCol = document.getElementById("Total-col");
+    totalCol.innerHTML = "Rp. <?=number_format($totalJumlah, 0,',','.'); ?>";
+  }
+</script>
 </body>
 </html>
