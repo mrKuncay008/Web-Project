@@ -51,10 +51,27 @@ table-dark table-striped">
 			<?php $i++; ?>
 			<?php endforeach; ?>
   </tbody>
+   <tfoot>
+    <tr>
+      <th colspan="4" style="text-align:right;">Total</th>
+        <td>
+          <?php 
+            $total = 0;
+            foreach ($tabung as $show) {
+              $total += $show['Jumlah'];
+            }
+            echo "Rp.".number_format($total,0,',','.');
+           ?> 
+      </td>
+    </tr>
+  </tfoot>
 </table>
 
 <pre>
  			<a class="btn btn-primary btn-sm" href="indexinput.php" role="button">Submit Nabung</a>
 </pre>
+<div>
+  <marquee> Halloo </marquee>
+</div>
 </body>
 </html>
