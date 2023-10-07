@@ -1,0 +1,72 @@
+/* #navbarSupportedContent {
+    font-weight: bold;
+    display: flex;
+    align: center;
+    justify-content: space-between;
+} */
+.btn {
+    display: flex;
+    position: relative;
+    padding: 12px 20px;
+    line-height: 15px;
+    font-size: 17px;
+    font-weight: bold;
+    border-radius: 5px;
+    height: auto;
+    color: white;
+    background-color: #fa16cc;
+}
+.btn2 {
+    display: block;
+    position: relative;
+    font-size: 17px;
+    font-weight: bold;
+    border-radius: 5px;
+    color: white;
+    background-color: #fa16cc;
+}
+
+.navbar{
+    display: flex;
+    direction: horizontal;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+.header-judul {
+    display: block;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url('img1.jpg');
+    padding-top: 70px;
+    padding-bottom: 13%;
+    background-size: cover;
+    position: relative;
+}
+.judul-sp {
+    color: whitesmoke;
+    display: block;
+    margin-left: 10%;justify-content: start;
+    position: static;
+    text-align: left;
+    font-family: 'Oswald';
+    margin-right: 10%;
+    margin-bottom: 20px 20px;
+    max-width: 46%;
+}
+.txt-judul {
+    font-size: 50px;
+    
+}
+.txt-judul2 {
+    display: block;
+    margin-left: 10%;
+    font-size: 18px;
+    font-family:'Monteserrat';
+    color: aliceblue;
+}
+p.txt-judul {
+    font-size: 18px;
+    position: relative;
+    margin-top: -1%;
+    font-weight: bold;
+    font-style: italic;
+}

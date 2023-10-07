@@ -3,17 +3,19 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Welcome</title>
-	<link rel="stylesheet" type="text/css" href="login.css">
+	<title>Login</title>
 </head>
 <body>
-  <div id="wrapper">
-   <a href="pass.php">
-  	<div class="box" >Apa ini Masse ??</div>
-   </a>
-   <a href="">
-	<div class="box">Apa ini Asima meo/guest ??</div>
-   </a>
-</div>
+	<div id="a"></div>
+	<script>
+		let admin = window.prompt("Siapa Anda ?", "Input Name");
+		if (admin === "aisma") {
+			window.location.href = "index.php";
+		}
+		else {
+			admin = "<p> Error 404 Not Found! </p>";
+		}
+		 document.getElementById('a').innerHTML = admin;
+	</script>
 </body>
 </html>
