@@ -1,0 +1,99 @@
+    * {
+      box-sizing: border-box;
+    }
+
+    .col-sm1 {
+      display: block;
+      margin-bottom: 50%;
+      position: relative;
+      width: auto;
+      height: 50%;
+      margin: auto;
+
+    }
+
+    .col-sm0 {
+      display: block;
+      margin: 30%;
+      position: relative;
+      width: auto;
+      height: auto;
+      margin: auto;
+    }
+    .navbar {
+      display: block;
+      margin-top: -6%;
+      marker-end: 20%;
+      height: auto;
+      width: auto;
+    }
+    .d-flex{
+      display: flex;
+      position: relative;
+      padding: 12px;
+      margin-left: auto;
+      line-height: 15px;
+      font-size: 17px;
+      font-weight: bold;
+      border-radius: 5px;
+      height: auto;
+    }
+
+    .flex-container {
+      display: flex;
+      position: relative;
+      margin-bottom: 50px;
+    }
+
+    .flex-item-left {
+      background-color: darkred;
+      padding: 10px;
+      flex: 100%;
+    }
+
+    .flex-item-center {
+      background-color: darkred;
+      padding: 10px;
+      flex: 100%;
+    }
+    .flex-item-right {
+      background-color: darkred;
+      padding: 10px;
+      flex: 100%;
+    }
+
+    /* Responsive layout - makes a one column-layout instead of two-column layout */
+    @media (max-width: 750px) {
+      .flex-container {
+        flex-direction: column;
+      }
+    }
+    .navbar-brand {
+      font-weight: bold;
+    }
+      body {
+        font-family: Courier;
+        background-repeat: repeat;
+      background-size: cover;
+      background-attachment: fixed;
+      /* background-clip: border-box; */
+      overflow: visible;
+      width: auto;
+      height: auto;
+      min-height: 0;
+      opacity: 1;
+      -webkit-text-fill-color: inherit;
+      mix-blend-mode: cover;
+      padding-top: 70px;
+      padding-bottom: 13%;
+      position: relative;
+        /* background-color: black; */
+        background-image:  linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url('jatayu.jpg'); 
+        font-size: small;
+      }
+      .row {
+        font-size:small;
+      }
+      th {
+        color: whitesmoke;
+      }
