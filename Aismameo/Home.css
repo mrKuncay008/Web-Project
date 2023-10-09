@@ -215,3 +215,73 @@
 }.u-section-2 .u-sheet-1 {
   min-height: 400px;
 }
+
+/* asu */
+
+.u-section-1F .u-sheet-1F {
+  min-height: 878px;
+}
+
+.u-section-1F .u-layout-wrap-1F {
+  margin-top: 26px;
+  margin-bottom: 60px;
+}
+
+.u-section-1F.u-layout-cell-1F {
+  min-height: 615px;
+}
+
+.u-section-1F .u-container-layout-1F {
+  box-shadow: -17px 5px 20px 0 rgba(0,0,0,0.4);
+  padding: 20px;
+  height: 120%;
+}
+
+.u-section-1F .u-text-1F {
+  font-weight: 700;
+  margin: 53px auto 0 30px;
+}
+
+.u-section-1F .u-text-2F {
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin: 21px 788px 0 43px;
+}
+
+.u-section-1F .u-text-3F {
+  margin: 8px 788px 0 43px;
+}
+
+.u-section-1F .u-map-1F {
+  width: 397px;
+  height: 228px;
+  margin: 23px auto 0 30px;
+}
+
+.u-section-1F .u-image-1F {
+  width: 378px;
+  height: 378px;
+  margin: -440px 163px 0 auto;
+}
+
+@media (max-width: 575px) {
+  .u-section-1F .u-text-2F {
+    margin-right: 31px;
+  }
+
+  .u-section-1F .u-text-3F {
+    margin-right: 31px;
+  }
+
+  .u-section-1F .u-map-1F {
+    width: 10% auto;
+    position: relative;
+    margin-left: 0;
+  }
+
+  .u-section-1F .u-image-1F {
+    width: 50px;
+    height: 50px;
+    margin-right: 0;
+  }
+}

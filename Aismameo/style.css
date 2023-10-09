@@ -16,6 +16,12 @@
     color: white;
     background-color: #fa16cc;
 }
+.btn2:hover{
+    transition: .2s;
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.1);
+}
 .btn2 {
     display: block;
     position: relative;
@@ -79,4 +85,17 @@ p.txt-judul {
     margin-top: -1%;
     font-weight: bold;
     font-style: italic;
+}
+
+.zoom1:hover {
+    transition: .2s;
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.2);
+}
+
+#sec-64ba {
+    padding: 120px auto;
+    width: auto;
+    height: auto;
 }
