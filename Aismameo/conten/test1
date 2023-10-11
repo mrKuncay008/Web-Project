@@ -32,6 +32,10 @@
                         <a href=""></a>
                     </li>
                     <li>
+                        <div class="asuuuu">
+                            <h2>hallo kuncay</h2>
+                            kamuu kuncya
+                        </div>
                         <a href=""></a>
                     </li>
                     <li class="asuuuu p" aria-multiline="snnnc">
@@ -39,6 +43,15 @@
                     </li>
                 </ul>
             </div>
+        </div>
+    </nav>
+    <nav>
+        hallo kamu kuncay
+        <li class="list saru2">
+            omo omo momo
+        </li>
+        <div class="kuncayyy">
+            <h2>kuncay</h2>
         </div>
     </nav>
 </body>
