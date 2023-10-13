@@ -1,0 +1,15 @@
+.navbar {
+  display: flex;
+  padding: 12px;
+  margin-left: auto;
+  line-height: 15px;
+  font-size: 17px;
+  font-weight: bold;
+  border-radius: 1px;
+  height: auto;
+  position: relative;
+  font-size: medium; 
+  background-color:darkred;
+  font-weight: bold; 
+  font-family: sans-serif;
+}

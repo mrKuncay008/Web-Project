@@ -46,18 +46,15 @@
     }
 
     .flex-item-left {
-      background-color: darkred;
       padding: 10px;
       flex: 100%;
     }
 
     .flex-item-center {
-      background-color: darkred;
       padding: 10px;
       flex: 100%;
     }
     .flex-item-right {
-      background-color: darkred;
       padding: 10px;
       flex: 100%;
     }
