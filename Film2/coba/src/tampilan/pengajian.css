@@ -1,0 +1,63 @@
+.App {
+    height: auto;
+    position: relative;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: black;
+    overflow: visible;
+    opacity: 1;
+      -webkit-text-fill-color: inherit;
+      mix-blend-mode: cover;
+      background-image:  linear-gradient(140deg, rgba(0, 0, 0, 0.827), rgba(0, 0, 0, 0.005)), url('../img/jatayu.jpg');
+}
+.Logo {
+  margin: 20px;
+}
+
+* {
+  box-sizing: border-box;
+}
+.row {
+    font-size:small;
+  }
+
+.col-sm0 {
+    display: block;
+    position: relative;
+    width: auto;
+    height: auto;
+    margin: auto 30px -10px;
+}
+
+.flex-container {
+  display: flex;
+  position: relative;
+  margin: 0 auto;
+}
+
+.flex-item-left {
+  margin: auto 60px;
+  flex: 100%;
+}
+.flex-item-center {
+  margin: auto 60px;
+  flex: 100%;
+}
+.flex-item-right {
+  margin: auto 60px;
+  flex: 100%;
+}
+
+@media (max-width: 750px) {
+        .flex-container {
+        flex-direction: column;
+    }
+}
+
+.judulA {
+  font-size: medium;
+  color: whitesmoke;
+  font-weight: bold; 
+  font-family:  sans-serif;
+}
