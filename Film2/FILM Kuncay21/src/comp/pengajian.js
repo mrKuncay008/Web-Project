@@ -1,4 +1,3 @@
-import '../App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.js';
 // File
@@ -13,6 +12,7 @@ import video6 from '../pengajian/KIAI TANJUNG - PERWUJUDAN PEMBEBASAN DALAM KONT
 
 const Ngaji = () => {
     return (
+    <div className="Bg">
     <div className="col-sm1">
     <div className="col-sm0">
         <a className="navbar-brand">
@@ -65,6 +65,7 @@ const Ngaji = () => {
             </div>
         </div>
       </td>
+    </div>
     </div>
     );
 }

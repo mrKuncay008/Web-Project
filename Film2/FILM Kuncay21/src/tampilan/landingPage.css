@@ -1,0 +1,44 @@
+ @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@1,500&display=swap');
+
+.BgLanding {
+    height: 100vh;
+    position: relative;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: black;
+    overflow: visible;
+    opacity: 1;
+      mix-blend-mode: cover;
+    background-image:  linear-gradient(100deg, rgba(0, 0, 0, 0.86), rgba(0, 0, 0, 0.211)), url("../img/landing.jpg");
+}
+
+.TitleLanding {
+    position: absolute;
+    top: 20%;
+    width: 100%;
+    margin: 0 auto; 
+    text-align:center; 
+    line-height:50px;
+    text-align: center;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+.fadeInUp{animation:fadeInUp 2s ease backwards;}
+@keyframes fadeInUp{
+  0%{transform:translate(0px, 100px);
+     opacity: 0;}
+  100%{transform:translate(0px, 0); 
+        opacity: 1;}}
+
+.jud {
+    font-size: 3rem;
+    height: 45%;
+    font-family: 'Rubik', sans-serif;
+    letter-spacing: 3px;
+    text-align: center;
+    font-weight: 800;
+    line-height: 1;
+    text-shadow: 3px 4px black;
+    color:rgb(255, 255, 255);
+}
