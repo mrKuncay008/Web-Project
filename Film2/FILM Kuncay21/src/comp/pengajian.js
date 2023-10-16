@@ -22,7 +22,7 @@ const Ngaji = () => {
     </div>
       <td>
           <div className = "row">
-            <div className = "flex-container">
+            <div className = "flex-container fade1">
                 <div className="flex-item-left">
                     <video width={250} height={200} controls>
                         <source src={video1} type='video/mp4'/>
@@ -43,7 +43,7 @@ const Ngaji = () => {
                 </div>
             </div>
 
-            <div className = "flex-container">
+            <div className = "flex-container fade2">
             <div  className="flex-item-left">
                 <video width={250} height={200} controls>
                      <source src={video4} type="video/mp4" />

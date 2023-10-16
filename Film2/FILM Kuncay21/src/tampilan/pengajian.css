@@ -1,7 +1,7 @@
 .Bg {
-    height: 100vh;
+    height: auto;
     position: relative;
-    background-repeat: repeat;
+    background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     background-color: black;
@@ -35,6 +35,27 @@
   position: relative;
   margin: 0 auto;
 }
+
+.fade1{animation:fadeInUp 2s ease backwards;}
+@keyframes fadeInUp{
+  0%{transform:translate(0px, 100px);
+     opacity: 0;}
+  100%{transform:translate(0px, 0); 
+        opacity: 1;
+      }
+    }
+
+  .fade2 {
+    animation:fadeInUp 2s ease backwards;
+    animation-delay: 2s;
+  }
+    @keyframes fadeInUp{
+      0%{transform:translate(0px, 100px);
+         opacity: 0;}
+      100%{transform:translate(0px, 0); 
+            opacity: 1;
+          }
+        }
 
 .flex-item-left {
   margin: auto 60px;

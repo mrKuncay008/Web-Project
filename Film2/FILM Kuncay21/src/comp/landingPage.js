@@ -12,13 +12,17 @@ const Page = () => {
                         <Col>
                             <div className='jud jud1'>NONTON</div>
                             <div className='jud jud1'>DI MANA AJA</div>
-                            <div className='jud jud2'>BISA PAKE</div>
+                            <div className='jud jud2'>DI</div>
                             <div className='jud jud2'>KuncayFilm21</div>
                         </Col>
                     </Row>
                 </Container>
             </div>
-            <div className='ButList'></div>
+            <div className='ButList'>
+            <button type="button" class="btn btn-outline-light fadeInUp2">
+                    LET'S PLAY ↆ
+                </button>
+            </div>
         </div>
     )
 }
