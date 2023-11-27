@@ -83,6 +83,7 @@ const Main = () => {
   return (
     <div className="wrapper">
       <h1>TO-DO APP</h1>
+      <p className='CopyR'>Create By Mas.Kuncay 😁</p>
       <div className="task-input">
         <img src={Icon} alt="icon" />
         <input

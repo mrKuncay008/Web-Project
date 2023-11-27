@@ -10,7 +10,7 @@ function Dark() {
     return (
         <div className={darkMod ? 'dark-mode' : 'light-mode'}>
         <button className="Tombol" onClick={Toggle}>
-            {darkMod ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
+            {darkMod ? 'Ganti Mode Terang' : 'Ganti Mode Gelap'}
         </button>
         </div>
     );

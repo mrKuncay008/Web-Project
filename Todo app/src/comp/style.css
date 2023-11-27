@@ -19,6 +19,15 @@ body.dark-mode  {
   border: #2e2e2e;
   box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
+
+.dark-mode .task-box .task{
+  color:#ffffff; 
+}
+.dark-mode .task-input input {
+  background-color: #252424;
+  color: white;
+}
+.dark-mode .CopyR{color: #ccc;}
 /*                */
 .Tombol {
   position:relative;
@@ -26,7 +35,7 @@ body.dark-mode  {
   margin-bottom: 40%;
   width:30%;
   font-size: 10px;
-  background: #292929;
+  background: #1b1b1b;
 }
 
 body{
@@ -40,6 +49,12 @@ h1{
     text-align: center;
     color: red;
     font-family: 'Poppins', sans-serif;
+}
+.CopyR {
+  font-size: 10px;
+  font-family: sans-serif;
+  color: #252424;
+  font-weight: bold;
 }
 ::selection{
   color: #fff;
@@ -72,6 +87,8 @@ h1{
 .task-input input{
   height: 100%;
   width: 100%;
+  background-color: whitesmoke;
+  color: #252424;
   outline: none;
   font-size: 18px;
   border-radius: 5px;
