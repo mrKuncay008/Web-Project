@@ -1,6 +1,6 @@
 <?php
   require 'fungsi.php';
-  $tabung = query("SELECT * FROM tabel");
+  $tabung = query("SELECT * FROM tabungan");
 ?>
 
 <!DOCTYPE html>
@@ -40,11 +40,11 @@ table-dark table-striped">
 	<tr>
 		<th scope="row"> <?= $i; ?></th>
 			<td>
-				<a href="">Edit</a> / 
+				<a href="">Edit</a> /
 				<a href="indexDel.php?No=<?= $show["No"]; ?>" onclick = "return confirm('Apa Yakin Di hapus?');">Delete</a>
 			</td>
 			<!-- Main Php -->
-			<td><?= $show['Nabung']; ?></td>
+			<td><?= $show['Nama']; ?></td>
 			<td><?= $show['Tanggal']; ?></td>
 			<td><?= $show['Jumlah']; ?></td>
 	</tr>
@@ -56,7 +56,7 @@ table-dark table-striped">
         <button onclick="total()">Total</button>
     </th>
 	  <td id="Total-col">
-    <?php 
+    <?php
       $totalJumlah = 0;
         foreach ($tabung as $tampil) {
           $totalJumlah += $tampil['Jumlah'];
@@ -66,27 +66,10 @@ table-dark table-striped">
   </tr>
   </tfoot>
   </tbody>
-   <tfoot>
-    <tr>
-      <th colspan="4" style="text-align:right;">Total</th>
-        <td>
-          <?php 
-            $total = 0;
-            foreach ($tabung as $show) {
-              $total += $show['Jumlah'];
-            }
-            echo "Rp.".number_format($total,0,',','.');
-           ?> 
-      </td>
-    </tr>
-  </tfoot>
 </table>
 <pre>
  			<a class="btn btn-primary btn-sm" href="indexinput.php" role="button">Submit Nabung</a>
 </pre>
-<div>
-  <marquee> Halloo </marquee>
-</div>
 <script>
   function total() {
     var totalCol = document.getElementById("Total-col");
