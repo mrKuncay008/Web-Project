@@ -6,7 +6,7 @@
 
 				<script>
 					alert('Data Succsess Delete');
-					document.location.href = 'index.php';
+					document.location.href = 'index2.php';
 				</script>
 			";
 		} else {
@@ -15,7 +15,7 @@
 
 				<script>
 					alert('Data Failed to Delete');
-					document.location.href = 'index.php';
+					document.location.href = 'index2.php';
 				</script>";
 		}		
 ?>

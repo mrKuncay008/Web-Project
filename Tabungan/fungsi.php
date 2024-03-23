@@ -1,6 +1,6 @@
 <?php
 // Koneksi
-$conn = mysqli_connect('localhost','root','','Tabungan');
+$conn = mysqli_connect('localhost','id21137951_root','1Sampai10@','id21137951_root');
 function query($query) {
     global $conn;
     $select = mysqli_query($conn, $query);

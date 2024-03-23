@@ -15,9 +15,24 @@
           max-width: 600px; /* Atur lebar maksimal tabel */
           margin: 50px auto 0;
       }
-      .btn{
-          max-width: 600px; /* Atur lebar maksimal tabel */
-          margin: 20px 14%;
+      #but{
+          max-width: 200px; /* Atur lebar maksimal tabel */
+          margin: 10px 14%;
+      }
+      
+      .teks {
+        color: red;
+        animation: glitch 1.0s infinite;
+      }
+       @keyframes glitch{
+        65% {
+          color: green;
+          opacity: 1;
+        }
+        50% {
+          color: yellowgreen;
+          opacity: 0.50;
+        }
       }
     </style>
   </head>
@@ -40,8 +55,8 @@ table-dark table-striped">
 	<tr>
 		<th scope="row"> <?= $i; ?></th>
 			<td>
-				<a href="">Edit</a> / 
-				<a href="indexDel.php?No=<?= $show["No"]; ?>" onclick = "return confirm('Apa Yakin Di hapus?');">Delete</a>
+				<a type="button" class="btn btn-warning btn-sm" href="">Edit</a>
+				<a type="button" class="btn btn-danger btn-sm" href="indexDel.php?No=<?= $show["No"]; ?>" onclick = "return confirm('Apa Yakin Di hapus?');">Delete</a>
 			</td>
 			<!-- Main Php -->
 			<td><?= $show['Nabung']; ?></td>
@@ -50,6 +65,7 @@ table-dark table-striped">
 	</tr>
 			<?php $i++; ?>
 			<?php endforeach; ?>
+  </tbody>
   <tfoot>
   	<tr>
   		<th colspan="4" style="text-align:right;">
@@ -65,28 +81,15 @@ table-dark table-striped">
     </td>
   </tr>
   </tfoot>
-  </tbody>
-   <tfoot>
-    <tr>
-      <th colspan="4" style="text-align:right;">Total</th>
-        <td>
-          <?php 
-            $total = 0;
-            foreach ($tabung as $show) {
-              $total += $show['Jumlah'];
-            }
-            echo "Rp.".number_format($total,0,',','.');
-           ?> 
-      </td>
-    </tr>
-  </tfoot>
 </table>
+
 <pre>
- 			<a class="btn btn-primary btn-sm" href="indexinput.php" role="button">Submit Nabung</a>
+ 			<a id="but" class="but btn btn-primary btn-sm" href="indexinput.php" role="button">Submit Nabung</a>
 </pre>
-<div>
-  <marquee> Halloo </marquee>
-</div>
+    <marquee width="300px" hspace="20%" direction="left" scrollamount="7"> 
+        <h1 class="teks">Semangat !!!</h1> 
+    </marquee>
+    
 <script>
   function total() {
     var totalCol = document.getElementById("Total-col");

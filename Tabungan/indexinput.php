@@ -72,7 +72,7 @@
 
 		<button type="submit" name="submit" class="btn btn-success" style="font-weight: bold;">SUBMIT</button>
 		
-		<a class="btn btn-outline-light" href="index.php" role="button" style="font-weight:bold;">KEMBALI</a>
+		<a class="btn btn-outline-light" href="index2.php" role="button" style="font-weight:bold;">KEMBALI</a>
 
 	</form>
 </body>
