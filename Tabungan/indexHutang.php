@@ -1,14 +1,14 @@
 <?php 
 	require 'fungsi.php';
 	if (isset ($_POST["submit"])) {
-		// add uang masuk
+		// add utang
 
-		if (tabung($_POST) > 0) {
+		if (hutang($_POST) > 0) {
 			
 			echo "
 
 				<script>
-					alert('Data Tabungan is Succsess submit');
+					alert('Data Hutang is Succsess submit');
 				</script>
 			";
 		} else {
@@ -29,7 +29,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Input Celengan</title>
+    <title>Input Hutang</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <style>
         body {
@@ -51,7 +51,7 @@
 </head>
 <body>
     <h2>
-		Tambah Tabungan
+		Tambah Hutang
 	</h2>
     <form action="" method="post">
 		
@@ -61,8 +61,8 @@
 		</div>
 		
 		<div class="input-group mb-3">
-			<span class="input-group-text">Nabung</span>
-			<input type="text" name="Nabung" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="Nabung">
+			<span class="input-group-text">Hutang</span>
+			<input type="text" name="Hutang" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="Nabung">
 		</div>
 
 		<div class="input-group mb-3">

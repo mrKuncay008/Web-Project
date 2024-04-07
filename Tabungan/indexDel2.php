@@ -1,7 +1,7 @@
 <?php
     require 'fungsi.php';
-    $no = $_GET["No"];
-    if (hapus($no) > 0) {
+    $no2 = $_GET["No"];
+		if (hapus2($no2) > 0) {
 		echo "
 
 				<script>
@@ -17,5 +17,5 @@
 					alert('Data Failed to Delete');
 					document.location.href = 'index.php';
 				</script>";
-		}
+		}		
 ?>
