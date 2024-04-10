@@ -1,0 +1,140 @@
+ /*
+      .table{
+          max-width: 600px; //Atur lebar maksimal tabel 
+          margin: 50px auto 0;
+      }
+      .btn{
+          max-width: 50px; // Atur lebar maksimal tabel 
+          margin: 20px 5%;
+      }
+      .teks {
+        color: red;
+        animation: glitch 1.0s infinite;
+      }
+       @keyframes glitch{
+        65% {
+          color: green;
+          opacity: 1;
+        }
+        50% {
+          color: yellowgreen;
+          opacity: 0.50;
+        }
+      }*/
+      body {
+        background-image: url("futuristic-moon.jpg");
+        background-size: cover;
+      }
+      .table{  
+          position: relative;
+          max-width: 600px; /* Atur lebar maksimal tabel */
+          margin: 50px auto 0;
+      }
+      #but{
+          max-width: 200px; /* Atur lebar maksimal tabel */
+          margin: 10px 14%;
+      }
+      
+      .teks {
+        color: black;
+        text-align: center;
+        animation: glitch 1.0s infinite;
+      }
+      .teks2 {
+        color: whitesmoke;
+        text-shadow: 2px 3px black;
+        font-weight: bold;
+        text-align: center;
+      }
+       @keyframes glitch{
+        65% {
+          color: white;
+          opacity: 1;
+        }
+        50% {
+          color: red;
+          opacity: 0.50;
+        }
+      }
+
+    .footcontainer {
+      width: 100%;
+      padding: 70px 30px 20px;
+    }
+    .sosmed {
+      display: flex;
+      justify-content: center;
+    }
+
+    .sosmed a {
+      text-decoration: none;
+      background-color: white;
+      margin: 10px;
+      border-radius: 50%;
+      padding:  10px;
+    }
+
+    .sosmed a i{
+      font-size: 2em;
+      opacity: 0,9;;
+      color: black;
+    }
+
+    /* Hover affect on social media icon */
+.sosmed a:hover{
+    background-color: #111;
+    transition: 0.5s;
+}
+.sosmed a:hover i{
+    color: white;
+    transition: 0.5s;
+}
+.navfoot{
+    margin: 30px 0;
+}
+.navfoot ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+.navfoot ul li a{
+    color:white;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+
+}
+.navfoot ul li a:hover{
+    opacity: 1;
+}
+.footBottom{
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
+}
+.footBottom p{
+    color: white;
+}
+.designer{
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+@media (max-width: 700px){
+    .navfoot ul{
+        flex-direction: column;
+    } 
+    .navfoot ul li{
+        width:100%;
+        text-align: center;
+        margin: 10px;
+    }
+    .sosmed a{
+        padding: 8px;
+        margin: 4px;
+    }
+}

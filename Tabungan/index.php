@@ -11,67 +11,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buku Tabungan Online</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <style>
-      /*
-      .table{
-          max-width: 600px; //Atur lebar maksimal tabel 
-          margin: 50px auto 0;
-      }
-      .btn{
-          max-width: 50px; // Atur lebar maksimal tabel 
-          margin: 20px 5%;
-      }
-      .teks {
-        color: red;
-        animation: glitch 1.0s infinite;
-      }
-       @keyframes glitch{
-        65% {
-          color: green;
-          opacity: 1;
-        }
-        50% {
-          color: yellowgreen;
-          opacity: 0.50;
-        }
-      }*/
-      body {
-        background-image: url("futuristic-moon.jpg");
-        background-size: cover;
-      }
-      .table{  
-          position: relative;
-          max-width: 600px; /* Atur lebar maksimal tabel */
-          margin: 50px auto 0;
-      }
-      #but{
-          max-width: 200px; /* Atur lebar maksimal tabel */
-          margin: 10px 14%;
-      }
-      
-      .teks {
-        color: black;
-        text-align: center;
-        animation: glitch 1.0s infinite;
-      }
-      .teks2 {
-        color: whitesmoke;
-        text-shadow: 2px 3px black;
-        font-weight: bold;
-        text-align: center;
-      }
-       @keyframes glitch{
-        65% {
-          color: white;
-          opacity: 1;
-        }
-        50% {
-          color: red;
-          opacity: 0.50;
-        }
-      }
-
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="index.css">  
   </head>
 <body>
 <table class="table table-bordered border-black
@@ -180,5 +121,24 @@ table-dark table-striped">
 <pre>
  			<a class="btn btn-danger btn-sm" href="indexHutang.php" role="button">Submit Hutang</a>
 </pre>
+<footer>
+  <div class = "footcontainer">
+    <div class = "sosmed">
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""><i class="fa-brands fa-twitter"></i></a>
+            <a href=""><i class="fa-brands fa-google-plus"></i></a>
+            <a href=""><i class="fa-brands fa-youtube"></i></a>
+    </div>
+    <div class="navfoot">
+      <ul>
+        <li><a href="">Contact us</a></li>
+        </ul>
+    </div>   
+  </div>
+  <div class="footBottom">
+    <p>Copyright &copy;202; Designed by <span class="designer">Mas_pren@</span></p>
+  </div>
+</footer>
 </body>
 </html>
