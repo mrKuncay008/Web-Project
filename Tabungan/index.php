@@ -30,7 +30,7 @@ table-dark table-striped">
     </tr>
   </thead>
   <tbody class = "table-group-divider">
-  <?php $i = 1; ?>
+      <?php $i = 1; ?>
 	  	<?php foreach ($tabung as $show) : ?>
 	<tr>
 		<th scope="row"> <?= $i; ?></th>
