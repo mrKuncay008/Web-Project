@@ -11,11 +11,11 @@ h1, h2, p {
     font-family: 'Allerto', sans-serif;
     line-height: 150%;
 }
-.gambar {
+/* .gambar {
     position: relative;
     width: 21rem;
     height: 20rem;
-}
+} */
 
 .title h2{
     font-size: 25px;
@@ -33,3 +33,13 @@ h1, h2, p {
     margin: 10rem;
     height: auto;
 }
+
+.gambar-catalog {
+    margin-top: 30px;
+    height: 20rem;
+}
+.gbrCata {
+    height: auto;
+    width: auto;
+}
+.gbr-gas {width: 400px; height: 350px;}
