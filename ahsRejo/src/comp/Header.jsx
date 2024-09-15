@@ -24,7 +24,7 @@ const HeaderPage = () => {
                 <Nav className="nav__list navbar-nav ml-auto">
                     <Nav.Link className='nav__link' href="#home">Home</Nav.Link>
                     <Nav.Link className='nav__link' href="#catalog">Catalog</Nav.Link>
-                    <Nav.Link className='nav__link' href="#">Order</Nav.Link>
+                    <Nav.Link className='nav__link' href="#">Find Us</Nav.Link>
                     <Nav.Link className='nav__link' href="#">About</Nav.Link>
                 </Nav>
             </Navbar.Collapse>

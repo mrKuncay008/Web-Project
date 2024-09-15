@@ -2,8 +2,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import './App.css'
 import './style/NavbarStyle.css'
+import './style/FindMe.css'
+
 import HeaderPage from "./comp/Header"
 import CatalogPage from "./comp/Catalog"
+import FindMe from './comp/FindMe';
 
 function App() {
 
@@ -14,7 +17,7 @@ function App() {
       
       <HeaderPage />
       <CatalogPage />
-      
+      <FindMe />
     </>
   )
 }

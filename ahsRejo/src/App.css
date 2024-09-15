@@ -11,16 +11,7 @@ h1, h2, p {
     font-family: 'Allerto', sans-serif;
     line-height: 150%;
 }
-/* .gambar {
-    position: relative;
-    width: 21rem;
-    height: 20rem;
-} */
-
-.title h2{
-    font-size: 25px;
-    font-family: 'Allerto', sans-serif;
-}
+.gbr-gas {width: 400px; height: 350px;} 
 
 .gambar2 img{
     width: 70px;
@@ -28,18 +19,30 @@ h1, h2, p {
     margin-left: auto; margin-right: auto;
     text-align: center;
 }
+
+/* .gambar {
+    position: relative;
+    width: 21rem;
+    height: 20rem;
+} */
+
+/* .title h2{
+    font-size: 25px;
+    font-family: 'Allerto', sans-serif;
+}
+
+}
 .gambar2 p {text-align: center;}
 .gambar2 {
     margin: 10rem;
     height: auto;
-}
-
-.gambar-catalog {
-    margin-top: 30px;
-    height: 20rem;
-}
-.gbrCata {
-    height: auto;
-    width: auto;
-}
-.gbr-gas {width: 400px; height: 350px;}
+    }
+    
+    .gambar-catalog {
+        margin-top: 30px;
+        height: 20rem;
+        }
+        .gbrCata {
+            height: auto;
+            width: auto;
+            }*/
