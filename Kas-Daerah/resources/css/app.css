@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.table__Landing  {
+    width: auto ;
+    margin: 0 auto;
+    margin-top: 7rem;
+}
+
+.nav_main {
+    width: 10rem;
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+
+
+@media screen and (min-width: 1150px) {
+    .table__Landing  {
+        width: 70%;
+        margin: 0 auto;
+        margin-top: 7rem;
+    }
+    .Table {
+        margin-top: 1.25rem
+    }
+
+    .nav_main {
+        width: 12rem;
+        height: 100%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+    }
+}

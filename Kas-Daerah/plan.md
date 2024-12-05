@@ -1,0 +1,3 @@
+- Buat Loading screen
+- Fungsi CRUD
+- update user
