@@ -2,68 +2,75 @@ import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
 import {Button} from "@nextui-org/react";
 
 import { TrendingUp, TrendingDown, ArrowDown, DollarSign, ArrowUp } from 'react-feather';
-import { Head, Link } from '@inertiajs/react';
 import { useEffect, useState } from 'react';
+
+import { Head, Link } from '@inertiajs/react';
 import { Inertia } from '@inertiajs/inertia';
-import { ToastContainer, toast } from 'react-toastify';
+import {toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Swal from 'sweetalert2';
+
 export default function Dashboard(props) {
     const [totalIncome, setTotalIncome] = useState(0);
     const [totalOutcome, setTotalOutcome] = useState(0);
     const [totalSave, setTotalSave] = useState(0);
-    const [dataIn, setDataIN] = useState(['']); 
 
+    const [dataIn, setDataIN] = useState(['']); 
     const [dataOut, setDataOut] = useState(['']);
 
-    const [dataSave, setDataSave] = useState([
-        {id:9303,deskripsi:'Reksadana', tanggal:'2024-10-20', total:20000, status:'Pending' },
-        {id:9302,deskripsi:'Saham BCA', tanggal:'2024-11-20', total:35000, status:'Pending' },
-        {id:9305,deskripsi:'Saham Telkomsel', tanggal:'2024-12-20', total:40000, status:'Pending' },
-        {id:9309,deskripsi:'Crypto', tanggal:'2024-14-20', total:50000, status:'Pending' },
-    ]);
 
-    const handleDelIn = async (id) => {
+    const handleDelIn = async (id, name) => {
         console.log("Deleting income with ID:", id);
         try {
-            const response = await fetch(`/api/trans/incomes/${id}`, {
-                method: 'DELETE',
-                headers: {
-                  'Content-Type': 'application/json',
-                },
-              });
-        
-              const data = await res.json();
-              console.log(data);
-              setDataIN(data.table_income);
-        
-              if (response.ok) {
-                toast.success(data.message);
-              } else {
-                toast.error('Gagal menghapus data');
-              }
+            Swal.fire({
+                title: `Apa yakin ${name} Di hapus?`,
+                text: "Ini akan beresiko kehilangan data!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, Hapus!',
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    Inertia.delete(route('api.income.destroy', id));
+                    Swal.fire({
+                        title: "Deleted!",
+                        text: "Your file has been deleted.",
+                        icon: "success"
+                      });
+                } else {
+                    toast.error('Data Batal Di hapus !');
+                }
+                
+            });
         } catch (error) {
             toast.error('Terjadi kesalahan, coba lagi!');
         }
     }
-    const handleDelOut = async (id) => {
-        console.log("Deleting income with ID:", id);
+    const handleDelOut = (id, name) => {
+        console.log("Deleting outcome with ID:", id);
         try {
-            const response = await fetch(`/api/trans/outcomes/${id}`, {
-                method: 'DELETE',
-                headers: {
-                  'Content-Type': 'application/json',
-                },
-              });
-        
-              const data = await res.json();
-              console.log(data);
-              setDataOut(data.table_outcome);
-        
-              if (response.ok) {
-                toast.success(data.message);
-              } else {
-                toast.error('Gagal menghapus data');
-              }
+            Swal.fire({
+                title: `Apa yakin ${name} Di hapus?`,
+                text: "Ini akan beresiko kehilangan data!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, Hapus!',
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    Inertia.delete(route('api.outcome.destroy', id));
+                    Swal.fire({
+                        title: "Deleted!",
+                        text: "Your file has been deleted.",
+                        icon: "success"
+                      });
+                } else {
+                    toast.error('Data Batal Di hapus !');
+                }
+                
+            });
         } catch (error) {
             toast.error('Terjadi kesalahan, coba lagi!');
         }
@@ -83,7 +90,7 @@ export default function Dashboard(props) {
             }
         };
         fetchData();
-    }, []);
+    }, [dataOut, dataIn]);
     
     const dataOne = () => {
      return dataIn.map((datai, index) => (
@@ -98,7 +105,7 @@ export default function Dashboard(props) {
 
             <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{datai.date_colmn}</td>
             <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{datai.total ? datai.total.toLocaleString() : 'N/A'}</td>
-            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Pending</td>
+            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Success</td>
           </tr>
     ));
 }; 
@@ -114,7 +121,7 @@ export default function Dashboard(props) {
                 <Button 
                 color="danger"
                 size='sm'
-                onClick={() => handleDelOut(datao.id)}
+                onClick={() => handleDelOut(datao.id, datao.name, datao.date_colmn, datao.total)}
                 className="hover:bg-red-900">Delete</Button>
             </td>
 
@@ -136,9 +143,9 @@ export default function Dashboard(props) {
     }, [dataOut]);
 
     useEffect(() => {
-        const totalSave = dataSave.reduce((acc, data) => acc + data.total, 0);
-        setTotalSave(totalSave);
-    }, [dataSave]);
+        const totalBalance = totalIncome - totalOutcome;
+        setTotalSave(totalBalance);
+    }, [totalIncome, totalOutcome]);
 
     return (
         <AuthenticatedLayout
@@ -157,7 +164,7 @@ export default function Dashboard(props) {
                                 <ArrowDown />
                                 <h2 className="text-lg font-medium">Income</h2>
                             </div>
-                            <p className="text-2xl font-semibold">{totalIncome.toLocaleString()}</p>
+                            <p className="text-2xl font-semibold">+ {totalIncome.toLocaleString()}</p>
                         </div>
 
                         <div className={`p-6 w-64 h-40 rounded shadow-md bg-red-400`}>
@@ -165,14 +172,14 @@ export default function Dashboard(props) {
                                 <ArrowUp />
                                 <h2 className="text-lg font-medium">Outcome</h2>
                             </div>
-                            <p className="text-2xl font-semibold">{totalOutcome.toLocaleString()}</p>
+                            <p className="text-2xl font-semibold">- {totalOutcome.toLocaleString()}</p>
                         </div>
 
                         <div className={`p-6 w-64 h-40 rounded shadow-md bg-yellow-300`}>
                             <div className='flex gap-2 mb-2 border-b-1 border-b-slate-950'>
                                 <DollarSign />
                                 <h2 className="text-lg font-medium">
-                                    <a className="transition-colors duration-300">Total amount</a>
+                                    <a className="transition-colors duration-300">Total Amount</a>
                                 </h2>
                             </div>
                             <p className="text-2xl font-semibold">{totalSave.toLocaleString()}</p>

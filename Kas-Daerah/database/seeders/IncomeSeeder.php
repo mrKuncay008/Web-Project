@@ -28,7 +28,8 @@ class IncomeSeeder extends Seeder
 //             ]);
 //         }
         DB::table('table_income')->insert([
-            ['name' => 'Anggaran Tahunan', 'date_colmn' => '2024-10-28', 'total' => 200000000],
+            ['name' => 'Anggaran Tahunan', 'date_colmn' => '2024-10-28', 'total' => 20000000],
+            ['name' => 'Pajak Daerah', 'date_colmn' => '2024-02-02', 'total' => 10000000],
         ]);
     }
 }

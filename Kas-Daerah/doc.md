@@ -86,4 +86,3 @@ $user = new User atau path model
 # lalu masukan data
 $user-> name = 'nama' #dst
 ```
-

@@ -37,10 +37,6 @@ export default function Authenticated({ auth, header, children }) {
                         Outcome
                 </NavLink>
                 
-                <NavLink href="" className=' text-white block gap-3 px-4 py-2' active="">
-                    <Save size={20}/>
-                        Deposit Savings
-                </NavLink>
                 </div>
 
                 <div className="flex flex-col mt-12">

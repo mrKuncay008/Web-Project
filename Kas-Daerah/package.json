@@ -27,6 +27,7 @@
         "@nextui-org/react": "^2.4.8",
         "framer-motion": "^11.11.10",
         "react-feather": "^2.0.10",
-        "react-toastify": "^10.0.6"
+        "react-toastify": "^10.0.6",
+        "sweetalert2": "^11.14.5"
     }
 }
