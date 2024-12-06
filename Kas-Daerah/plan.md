@@ -1,3 +1,4 @@
 - Buat Loading screen
 - Fungsi CRUD
+- Fungsi income - oucome = Balance 
 - update user

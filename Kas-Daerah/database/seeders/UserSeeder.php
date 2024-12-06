@@ -22,9 +22,9 @@ class UserSeeder extends Seeder
             // insert data Income
         DB::table('users')->insert([
             ['name' => 'Pren Jon', 'email' => 'prenundira@gmail.com', 'password' => Hash::make('admin12345')],
-            ['name' => 'Olen', 'email' => 'olen.cat@gmail.com', 'password' => Hash::make('admin12345')],
-            ['name' => 'Popy', 'email' => 'popy.cat@gmail.com', 'password' => Hash::make('admin12345')],
-            ['name' => 'Yiyi Meng', 'email' => 'yiyi.cat@gmail.com', 'password' => Hash::make('admin12345')],
+            ['name' => 'kelurahan Cipete', 'email' => 'kelurahancipete@gmail.com', 'password' => Hash::make('admin12345')],
+            ['name' => 'kelurahan Greenlake', 'email' => 'kelurahangreenlake@gmail.com', 'password' => Hash::make('admin12345')],
+            
         ]);
     }
 }

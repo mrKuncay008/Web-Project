@@ -5,7 +5,8 @@ import { TrendingUp, TrendingDown, ArrowDown, DollarSign, ArrowUp } from 'react-
 import { Head, Link } from '@inertiajs/react';
 import { useEffect, useState } from 'react';
 import { Inertia } from '@inertiajs/inertia';
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 export default function Dashboard(props) {
     const [totalIncome, setTotalIncome] = useState(0);
     const [totalOutcome, setTotalOutcome] = useState(0);
@@ -21,6 +22,52 @@ export default function Dashboard(props) {
         {id:9309,deskripsi:'Crypto', tanggal:'2024-14-20', total:50000, status:'Pending' },
     ]);
 
+    const handleDelIn = async (id) => {
+        console.log("Deleting income with ID:", id);
+        try {
+            const response = await fetch(`/api/trans/incomes/${id}`, {
+                method: 'DELETE',
+                headers: {
+                  'Content-Type': 'application/json',
+                },
+              });
+        
+              const data = await res.json();
+              console.log(data);
+              setDataIN(data.table_income);
+        
+              if (response.ok) {
+                toast.success(data.message);
+              } else {
+                toast.error('Gagal menghapus data');
+              }
+        } catch (error) {
+            toast.error('Terjadi kesalahan, coba lagi!');
+        }
+    }
+    const handleDelOut = async (id) => {
+        console.log("Deleting income with ID:", id);
+        try {
+            const response = await fetch(`/api/trans/outcomes/${id}`, {
+                method: 'DELETE',
+                headers: {
+                  'Content-Type': 'application/json',
+                },
+              });
+        
+              const data = await res.json();
+              console.log(data);
+              setDataOut(data.table_outcome);
+        
+              if (response.ok) {
+                toast.success(data.message);
+              } else {
+                toast.error('Gagal menghapus data');
+              }
+        } catch (error) {
+            toast.error('Terjadi kesalahan, coba lagi!');
+        }
+    }
 
     useEffect(() => {
         const fetchData = async () => {
@@ -39,11 +86,6 @@ export default function Dashboard(props) {
     }, []);
     
     const dataOne = () => {
-        const handleDel = (id) => {
-            Inertia.delete('/api/trans/$(id)', {
-                onSuccess: () => alert('Data Delete Success')
-            });
-        };
      return dataIn.map((datai, index) => (
         <tr key={datai.id}>
             <td className='px-6 py-4 whitespace-nowrap text-sm text-gray-900'>{index + 1}</td>
@@ -51,7 +93,7 @@ export default function Dashboard(props) {
             
             <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                 <Button color="primary" size='sm' className="hover:bg-blue-900 mr-2">Update</Button>
-                <Button color="danger" onClick={() => handleDel(datai.id)} size='sm' className="hover:bg-red-900">Delete</Button>
+                <Button color="danger" onClick={() => handleDelIn(datai.id)} size='sm' className="hover:bg-red-900">Delete</Button>
             </td>
 
             <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{datai.date_colmn}</td>
@@ -69,7 +111,11 @@ export default function Dashboard(props) {
             
             <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                 <Button color="primary" size='sm' className="hover:bg-blue-900 mr-2">Update</Button>
-                <Button color="danger"  size='sm' className="hover:bg-red-900">Delete</Button>
+                <Button 
+                color="danger"
+                size='sm'
+                onClick={() => handleDelOut(datao.id)}
+                className="hover:bg-red-900">Delete</Button>
             </td>
 
             <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{datao.date_colmn}</td>
@@ -101,7 +147,7 @@ export default function Dashboard(props) {
             header={<h2 className="font-semibold text-xl text-slate-300 leading-tight">Dashboard</h2>}
         >
             <Head title="Dashboard" />
-            <h1 className='ml-7 font-semibold text-xl text-slate-800'>Hallo  Semangat Pagi {props.auth.user.name} ❤️</h1>
+            <h1 className='ml-7 font-semibold text-xl text-slate-800'>Hallo {props.auth.user.name}</h1>
 
             <div className="py-12 border-b-2 border-gray-500">
                 <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">

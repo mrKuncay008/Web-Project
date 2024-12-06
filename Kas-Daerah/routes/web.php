@@ -51,7 +51,8 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::get('api/trans', [IncomeOutController::class, 'apIndex']);
-Route::delete('api/trans/{income}', [IncomeOutController::class,'destroy'])->name('trans.destroy');
+Route::delete('api/trans/{income}', [IncomeOutController::class,'destroyIncome'])->name('trans.destroyIncome');
+Route::delete('api/trans/{outcome}', [IncomeOutController::class,'destroyOutcome'])->name('trans.destroyOutcome');
 
 
 require __DIR__.'/auth.php';

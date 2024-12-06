@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('table_savings', function (Blueprint $table) {
+        Schema::create('table_balance', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('trans_id')->unique();
@@ -30,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('table_savings');
+        Schema::dropIfExists('table_balance');
     }
 };

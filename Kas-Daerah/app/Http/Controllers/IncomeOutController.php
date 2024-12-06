@@ -19,9 +19,25 @@ class IncomeOutController extends Controller
         ]);
     }
 
-    public function destroy(ModelsIncome $incomes)
+    public function destroyIncome($id)
     {
-        $incomes->delete();
-        return response()->json(['message'=> 'Data Sukses Delete']);
+        $income = ModelsIncome::find($id);
+        if ($income) {
+            $income->delete();
+            return response()->json(['message'=> 'Data Sukses Delete']);
+        } else {
+            return response()->json(['message'=> 'Income not found'], 404);
+        }
+    }
+
+    public function destroyOutcome($id)
+    {
+        $outcome = ModelsOutcome::find($id);
+        if ($outcome) {
+            $outcome->delete();
+            return response()->json(['message'=> 'Data Sukses Delete']);
+        } else {
+            return response()->json(['message'=> 'Outcome not found'], 404);
+        }
     }
 }

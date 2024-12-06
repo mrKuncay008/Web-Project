@@ -31,10 +31,10 @@ class OutcomeSeeder extends Seeder
 //             ]);
 //         }
             DB::table('table_outcome')->insert([
-                ['name' => 'Makan', 'date_colmn' => '2024-10-31', 'total' => 30000],
-                ['name' => 'Skincare', 'date_colmn' => '2024-10-31', 'total' => 110000],
-                ['name' => 'Jalan-jalan', 'date_colmn' => '2024-10-31', 'total' => 100000],
-                ['name' => 'Beli Udud', 'date_colmn' => '2024-10-31', 'total' => 30000]
+                ['name' => 'Perbaikan Jalan', 'date_colmn' => '2024-10-31', 'total' => 3000000],
+                ['name' => 'Pengadaan Alat Kesehatan Rumah sakit', 'date_colmn' => '2024-10-31', 'total' => 11000000],
+                ['name' => 'Pengadaan Buku SD', 'date_colmn' => '2024-10-31', 'total' => 1000000],
+                ['name' => 'pengadaan Molis', 'date_colmn' => '2024-10-31', 'total' => 3000000]
             ]);
     }
 }

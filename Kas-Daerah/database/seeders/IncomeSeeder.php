@@ -28,9 +28,7 @@ class IncomeSeeder extends Seeder
 //             ]);
 //         }
         DB::table('table_income')->insert([
-            ['name' => 'Projek Jaringan', 'date_colmn' => '2024-10-28', 'total' => 200000],
-            ['name' => 'Projek Web', 'date_colmn' => '2024-10-29', 'total' => 3500000],
-            ['name' => 'Lemburan', 'date_colmn' => '2024-10-29', 'total' => 30000],
+            ['name' => 'Anggaran Tahunan', 'date_colmn' => '2024-10-28', 'total' => 200000000],
         ]);
     }
 }
