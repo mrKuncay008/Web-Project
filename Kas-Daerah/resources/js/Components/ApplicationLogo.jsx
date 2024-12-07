@@ -1,4 +1,4 @@
-import appLogo from "../../../public/image/newlogo.png"
+import appLogo from "../../../public/image/new.png"
 
 export default function ApplicationLogo(props) {
     return (

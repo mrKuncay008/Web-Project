@@ -4,16 +4,18 @@ import {Button} from "@nextui-org/react";
 import { TrendingUp, TrendingDown, ArrowDown, DollarSign, ArrowUp } from 'react-feather';
 import { useEffect, useState } from 'react';
 
+import 'react-toastify/dist/ReactToastify.css';
+import Loading from '@/Layouts/LoadingCard';
 import { Head, Link } from '@inertiajs/react';
 import { Inertia } from '@inertiajs/inertia';
 import {toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 import Swal from 'sweetalert2';
 
 export default function Dashboard(props) {
     const [totalIncome, setTotalIncome] = useState(0);
     const [totalOutcome, setTotalOutcome] = useState(0);
     const [totalSave, setTotalSave] = useState(0);
+    const [isLoading, setIsLoading] = useState(true);
 
     const [dataIn, setDataIN] = useState(['']); 
     const [dataOut, setDataOut] = useState(['']);
@@ -87,6 +89,10 @@ export default function Dashboard(props) {
 
             } catch (err) {
                 console.error('Error Fetching data: ', err);
+            } finally {
+                setTimeout(() => {
+                    setIsLoading(false);
+                }, 4000);
             }
         };
         fetchData();
@@ -149,11 +155,14 @@ export default function Dashboard(props) {
 
     return (
         <AuthenticatedLayout
-            auth={props.auth}
-            errors={props.errors}
-            header={<h2 className="font-semibold text-xl text-slate-300 leading-tight">Dashboard</h2>}
+        auth={props.auth}
+        errors={props.errors}
+        header={<h2 className="font-semibold text-xl text-slate-300 leading-tight">Dashboard</h2>}
         >
             <Head title="Dashboard" />
+        {isLoading ? (<Loading />):(
+            <>
+            
             <h1 className='ml-7 font-semibold text-xl text-slate-800'>Hallo {props.auth.user.name}</h1>
 
             <div className="py-12 border-b-2 border-gray-500">
@@ -261,6 +270,8 @@ export default function Dashboard(props) {
                     </div>
                 </div>
             </div>
-        </AuthenticatedLayout>
+            </>
+            )};
+            </AuthenticatedLayout>
     );
 }
