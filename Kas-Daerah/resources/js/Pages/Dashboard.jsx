@@ -1,10 +1,9 @@
-import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
-import {Button} from "@nextui-org/react";
-
-import { TrendingUp, TrendingDown, ArrowDown, DollarSign, ArrowUp } from 'react-feather';
-import { useEffect, useState } from 'react';
-
+import '../../css/app.css';
 import 'react-toastify/dist/ReactToastify.css';
+import { useEffect, useState } from 'react';
+import {Button} from "@nextui-org/react";
+import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
+import { TrendingUp, TrendingDown, ArrowDown, DollarSign, ArrowUp } from 'react-feather';
 import Loading from '@/Layouts/LoadingCard';
 import { Head, Link } from '@inertiajs/react';
 import { Inertia } from '@inertiajs/inertia';
@@ -106,7 +105,7 @@ export default function Dashboard(props) {
             
             <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                 <Button color="primary" size='sm' className="hover:bg-blue-900 mr-2">Update</Button>
-                <Button color="danger" onClick={() => handleDelIn(datai.id)} size='sm' className="hover:bg-red-900">Delete</Button>
+                <Button color="danger" onClick={() => handleDelIn(datai.id, datai.name)} size='sm' className="hover:bg-red-900">Delete</Button>
             </td>
 
             <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{datai.date_colmn}</td>
@@ -132,7 +131,7 @@ export default function Dashboard(props) {
             </td>
 
             <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{datao.date_colmn}</td>
-            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{datao.total}</td>
+            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{datao.total ? datao.total.toLocaleString() : 'N/A'}</td>
             <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Pending</td>
           </tr>
     ));
@@ -188,7 +187,7 @@ export default function Dashboard(props) {
                             <div className='flex gap-2 mb-2 border-b-1 border-b-slate-950'>
                                 <DollarSign />
                                 <h2 className="text-lg font-medium">
-                                    <a className="transition-colors duration-300">Total Amount</a>
+                                    <a className="transition-colors duration-300">Sisa Saldo</a>
                                 </h2>
                             </div>
                             <p className="text-2xl font-semibold">{totalSave.toLocaleString()}</p>
@@ -272,6 +271,6 @@ export default function Dashboard(props) {
             </div>
             </>
             )};
-            </AuthenticatedLayout>
+        </AuthenticatedLayout>
     );
 }

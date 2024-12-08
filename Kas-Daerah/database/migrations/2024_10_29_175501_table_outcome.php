@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('table_outcome', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('name', 70);
             $table->date('date_colmn');
             $table->integer('total');
             $table->timestamps();

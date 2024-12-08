@@ -1,4 +1,4 @@
-- Buat Loading screen
-- Fungsi CRUD
-- Fungsi income - oucome = Balance 
-- update user
+- Buat Loading screen {ok}
+- Fungsi income - oucome = Balance {ok}
+- Fungsi CRUD {Delete, }
+- update Auth user

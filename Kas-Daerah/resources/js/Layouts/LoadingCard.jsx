@@ -1,9 +1,12 @@
 import React from 'react';
+import '../../css/app.css';
 
 function Loading() {
   return (
     <>
-            <div className="flex justify-center items-center h-full loader"></div>
+      <div className='mt-28 flex justify-center items-center'>
+        <div className="loader"></div>
+      </div>
     </>
   );
 }

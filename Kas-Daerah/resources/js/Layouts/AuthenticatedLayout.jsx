@@ -1,15 +1,12 @@
 import { useState } from 'react';
 import '../../css/app.css';
 import kelLogo from "../../../public/image/logoNew.png"
-
-// import Dropdown from '@/Components/Dropdown';
-// import ResponsiveNavLink from '@/Components/ResponsiveNavLink';
 import { List, Download, Upload, Save } from 'react-feather';
 import NavLink from '@/Components/NavLink';
 import { Link } from '@inertiajs/react';
+import ModalIncome from './ModalIncome';
 
 export default function Authenticated({ auth, header, children }) {
-    // const [showingNavigationDropdown, setShowingNavigationDropdown] = useState(false);
 
     return (
         <div className="flex min-h-screen bg-gray-100">
@@ -22,15 +19,15 @@ export default function Authenticated({ auth, header, children }) {
                 </div>
 
                 <div className="flex flex-col gap-4 mt-5">
-                <NavLink href={route('dashboard')} className=' text-white gap-3 block px-4 py-2' active={route().current('dashboard')}>
+                <NavLink href={route('dashboard')} className=' text-white gap-3 block px-4 py-2 hover:text-blue-500' active={route().current('dashboard')}>
                     <List size={20}/>
-                        Dasbord
+                        Dasboard
                 </NavLink>
                 
-                <NavLink href="" className=' text-white block gap-3 px-4 py-2' active="">
+                <div className=' flex gap-3 px-4 py-2 hover:text-blue-500'>
                     <Download size={20}/>
-                        Income 
-                </NavLink>
+                    <ModalIncome/>
+                </div>
 
                 <NavLink href="" className=' text-white block gap-3 px-4 py-2' active="">
                     <Upload size={20}/>
