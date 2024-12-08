@@ -82,7 +82,6 @@ export default function Dashboard(props) {
             try {
                 const res = await fetch('/api/trans');
                 const data = await res.json();
-                console.log(data)
                 setDataIN(data.table_income);
                 setDataOut(data.table_outcome);
 
@@ -110,7 +109,6 @@ export default function Dashboard(props) {
 
             <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{datai.date_colmn}</td>
             <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{datai.total ? datai.total.toLocaleString() : 'N/A'}</td>
-            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Success</td>
           </tr>
     ));
 }; 
@@ -132,7 +130,6 @@ export default function Dashboard(props) {
 
             <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{datao.date_colmn}</td>
             <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">{datao.total ? datao.total.toLocaleString() : 'N/A'}</td>
-            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">Pending</td>
           </tr>
     ));
 };
@@ -222,9 +219,6 @@ export default function Dashboard(props) {
                             <th scope="col" className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">
                                 Total
                             </th>
-                            <th scope="col" className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">
-                                Status
-                            </th>
                         </tr>
                     </thead>
                     <tbody className="bg-white divide-y divide-gray-200">
@@ -255,9 +249,6 @@ export default function Dashboard(props) {
                             </th>
                             <th scope="col" className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">
                                 Total
-                            </th>
-                            <th scope="col" className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">
-                                Status
                             </th>
                         </tr>
                     </thead>

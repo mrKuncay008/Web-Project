@@ -17,15 +17,6 @@ use Inertia\Inertia;
 |
 */
 
-// Route::get('/', function () {
-//     return Inertia::render('Welcome', [
-//         'canLogin' => Route::has('login'),
-//         'canRegister' => Route::has('register'),
-//         'laravelVersion' => Application::VERSION,
-//         'phpVersion' => PHP_VERSION,
-//     ]);
-// });
-
 Route::get('/', function () {
     return Inertia::render('Landing/Landingpage', [
         'myNavbar' => [
@@ -51,8 +42,13 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::get('api/trans', [IncomeOutController::class, 'apIndex']);
+
+Route::post('api/income/', [IncomeOutController::class, 'storeIncome'])->name('api.income.store');
+Route::post('api/outcome/', [IncomeOutController::class, 'storeOutcome'])->name('api.outcome.store');
+
 Route::delete('api/income/{id}', [IncomeOutController::class, 'destroyIncome'])->name('api.income.destroy');
 Route::delete('api/outcome/{id}', [IncomeOutController::class, 'destroyOutcome'])->name('api.outcome.destroy');
+
 
 
 

@@ -5,6 +5,7 @@ import { List, Download, Upload, Save } from 'react-feather';
 import NavLink from '@/Components/NavLink';
 import { Link } from '@inertiajs/react';
 import ModalIncome from './ModalIncome';
+import ModalOutcome from './ModalOutcome';
 
 export default function Authenticated({ auth, header, children }) {
 
@@ -29,10 +30,10 @@ export default function Authenticated({ auth, header, children }) {
                     <ModalIncome/>
                 </div>
 
-                <NavLink href="" className=' text-white block gap-3 px-4 py-2' active="">
+                <div className=' flex gap-3 px-4 py-2 hover:text-blue-500'>
                     <Upload size={20}/>
-                        Outcome
-                </NavLink>
+                        <ModalOutcome />
+                </div>
                 
                 </div>
 

@@ -7,19 +7,18 @@ import {
   ModalFooter,
   Button,
   useDisclosure,
-  Input,
 } from "@nextui-org/react";
 import { toast } from "react-toastify";
 import { Inertia } from "@inertiajs/inertia";
 
-export default function ModalIncome() {
+export default function ModalOutcome() {
   const {isOpen, onOpen, onClose} = useDisclosure();
   const [backdrop, setBackdrop] = React.useState("opaque");
   const [size, setSize] = React.useState("sm");
   const [ formData, setFormData ] = useState({
     name: "",
     total: "",
-    date_column: "",
+    date_column: '',
   });
 
   const backdrops = ["blur"];
@@ -38,17 +37,16 @@ export default function ModalIncome() {
     }));
   };
 
-  const handleSubmitIn = async (e) => {
+  const handleSubmitOut = async (e) => {
     if (!formData.name || !formData.total && !formData.date_column) {
-      toast.error("Semua Field Harus di Isi !");
+      toast.error("Semua Field Harus di Isi ");
       return;
     }
     console.log("Submit triggered", formData);
     try {
-      Inertia.post(route("api.income.store", formData));
+      Inertia.post(route("api.outcome.store", formData));
       toast.success("Income successfully created!");
       setFormData({ name: "", total: "" });
-      onClose();
       
     } catch (error) {
       console.error("Error:", error);
@@ -66,7 +64,7 @@ export default function ModalIncome() {
             variant="flat"
             onClick={() => handleOpen(b)}
           >
-            Pemasukan Dana
+            Pengeluaran Dana
           </span>
         ))}
       </div>
@@ -74,9 +72,10 @@ export default function ModalIncome() {
         <ModalContent>
         {(onClose) => (
             <>
-              <ModalHeader className="flex flex-col gap-1 font-semibold">Input Pemasukan Baru</ModalHeader>
+              <ModalHeader className="flex flex-col gap-1 font-semibold ">Input Pengeluaran Baru</ModalHeader>
               <ModalBody>
-            <form onSubmit={handleSubmitIn}>
+            
+            <form onSubmit={handleSubmitOut}>
               <div className="flex flex-col gap-4">
               {/* Input for Name */}
               <div className="flex flex-col">
@@ -128,7 +127,7 @@ export default function ModalIncome() {
                 <Button color="secondary" variant="light" onPress={onClose}>
                   Close
                 </Button>
-                <Button color="success" onPress={handleSubmitIn}>
+                <Button color="danger" onPress={handleSubmitOut}>
                   Submit
                 </Button>
               </ModalFooter>

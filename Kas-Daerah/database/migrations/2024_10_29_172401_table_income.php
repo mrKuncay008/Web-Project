@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('table_income', function (Blueprint $table) {
             $table->id();
             //$table->foreignId('user_id')->constrained()->onDelete('cascade');
-            $table->string('name');
+            $table->string('name', 50);
             $table->date('date_colmn');
             $table->integer('total');
             $table->timestamps();
