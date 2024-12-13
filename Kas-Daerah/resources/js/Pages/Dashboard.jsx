@@ -9,6 +9,7 @@ import { Head, Link } from '@inertiajs/react';
 import { Inertia } from '@inertiajs/inertia';
 import {toast } from 'react-toastify';
 import Swal from 'sweetalert2';
+import ModalUpdateIn from '@/Layouts/ModalUpdateIn';
 
 export default function Dashboard(props) {
     const [totalIncome, setTotalIncome] = useState(0);
@@ -47,7 +48,7 @@ export default function Dashboard(props) {
         } catch (error) {
             toast.error('Terjadi kesalahan, coba lagi!');
         }
-    }
+    };
     const handleDelOut = (id, name) => {
         console.log("Deleting outcome with ID:", id);
         try {
@@ -75,8 +76,13 @@ export default function Dashboard(props) {
         } catch (error) {
             toast.error('Terjadi kesalahan, coba lagi!');
         }
-    }
+    };
 
+    const [selectedIncome, setSelectedIncome] = useState(null); // Menyimpan income yang dipilih untuk diupdate
+
+    const handleEditClick = (datai) => {
+      setSelectedIncome(datai);
+    };
     useEffect(() => {
         const fetchData = async () => {
             try {
@@ -103,7 +109,7 @@ export default function Dashboard(props) {
             <td className='px-6 py-4 whitespace-nowrap text-sm text-gray-900'>{datai.name}</td>
             
             <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                <Button color="primary" size='sm' className="hover:bg-blue-900 mr-2">Update</Button>
+                <Button color="primary" size='sm' className="hover:bg-blue-900 mr-2"><ModalUpdateIn/></Button>
                 <Button color="danger" onClick={() => handleDelIn(datai.id, datai.name)} size='sm' className="hover:bg-red-900">Delete</Button>
             </td>
 

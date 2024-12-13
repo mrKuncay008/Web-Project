@@ -46,6 +46,8 @@ Route::get('api/trans', [IncomeOutController::class, 'apIndex']);
 Route::post('api/income/', [IncomeOutController::class, 'storeIncome'])->name('api.income.store');
 Route::post('api/outcome/', [IncomeOutController::class, 'storeOutcome'])->name('api.outcome.store');
 
+Route::put('api/income/{id}', [IncomeOutController::class, 'updateIncome'])->name('api.income.update');
+
 Route::delete('api/income/{id}', [IncomeOutController::class, 'destroyIncome'])->name('api.income.destroy');
 Route::delete('api/outcome/{id}', [IncomeOutController::class, 'destroyOutcome'])->name('api.outcome.destroy');
 

@@ -44,7 +44,7 @@ export default function ModalIncome() {
     }
     console.log("Submit triggered", formData);
     try {
-      Inertia.post(route("api.income.store", formData));
+      Inertia.put(route("api.income.update", formData));
       toast.success("Income successfully created!");
       setFormData({ name: "", total: "" });
       onClose();
@@ -65,7 +65,7 @@ export default function ModalIncome() {
             variant="flat"
             onClick={() => handleOpen(b)}
           >
-            Pemasukan Dana
+            Edit
           </span>
         ))}
       </div>

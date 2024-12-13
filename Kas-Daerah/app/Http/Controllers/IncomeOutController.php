@@ -50,6 +50,26 @@ class IncomeOutController extends Controller
         return redirect()->back()->with('success', 'Income successfully created!');
     }
 
+    public function updateIncome(Request $request, $id) {
+        $validatedData = $request->validate([
+            'name' => 'required|string|max:255',
+            'total' => 'required|numeric',
+            'date_column' => 'required|date',
+        ]);
+
+        $income = ModelsIncome::find($id);
+        if (!$income) {
+            return redirect()->back()->with('error', 'Income not found');
+        }
+        $income = new ModelsIncome();
+        $income->total = $validatedData['total'];
+        $income->name = $validatedData['name'];
+        $income->date_colmn = $validatedData['date_colmn'];
+        $income->save();
+
+        return redirect()->back()->with('success', 'Income successfully Update!');
+    } 
+
     public function destroyIncome($id) {
         $income = ModelsIncome::find($id);
         $income->delete();

@@ -18,7 +18,7 @@ export default function ModalOutcome() {
   const [ formData, setFormData ] = useState({
     name: "",
     total: "",
-    date_column: '',
+    // date_column: '',
   });
 
   const backdrops = ["blur"];
