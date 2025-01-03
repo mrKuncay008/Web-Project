@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import '../../css/app.css';
 import kelLogo from "../../../public/image/logoNew.png"
-import { List, Download, Upload, Save } from 'react-feather';
+import { List, Download, Upload, Save, FileText } from 'react-feather';
 import NavLink from '@/Components/NavLink';
 import { Link } from '@inertiajs/react';
 import ModalIncome from './ModalIncome';
@@ -34,6 +34,11 @@ export default function Authenticated({ auth, header, children }) {
                     <Upload size={20}/>
                         <ModalOutcome />
                 </div>
+
+                <NavLink href={route('dashboard')} className=' text-white gap-3 block px-4 py-2 hover:text-blue-500' active={route().current('dashboard')}>
+                    <FileText size={20}/>
+                        Export Laporan
+                </NavLink>
                 
                 </div>
 
