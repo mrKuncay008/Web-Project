@@ -55,6 +55,16 @@ export default function ModalIncome() {
     }
   };
 
+  const handleDelete = async (id) => {
+    try {
+        const result = await apiDeleteIncome(id);
+        console.log('Deleted result:', result);
+    } catch (error) {
+        console.error('Failed to delete:', error);
+    }
+  };
+
+
   return (
     <>
       <div className="cursor-pointer inline-flex items-center px-1 pt-1 text-sm font-medium leading-5 transition duration-150 ease-in-out focus:outline-none ">
