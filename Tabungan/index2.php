@@ -1,6 +1,6 @@
 <?php
   require 'fungsi.php';
-  $tabung = query("SELECT * FROM tabel");
+  $tabung = query("SELECT * FROM tabungan");
 ?>
 
 <!DOCTYPE html>
@@ -89,7 +89,7 @@ table-dark table-striped">
 				<a class="btn btn-danger btn-sm" href="indexDel.php?No=<?= $show["No"]; ?>" onclick = "return confirm('Apa Yakin Di hapus?');">Delete</a>
 			</td>
 			<!-- Main Php -->
-			<td><?= $show['Nabung']; ?></td>
+			<td><?= $show['Nama']; ?></td>
 			<td><?= $show['Tanggal']; ?></td>
 			<td><?= $show['Jumlah']; ?></td>
 	</tr>

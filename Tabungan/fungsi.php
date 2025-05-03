@@ -14,7 +14,7 @@ function query($query) {
 function tabung($data) {
     global $conn;
 
-    $n= htmlspecialchars($data['Nabung']);
+    $n= htmlspecialchars($data['Nama']);
     $t= htmlspecialchars($data['Tanggal']);
     $j= htmlspecialchars($data['Jumlah']);
     // Query insert data
@@ -38,7 +38,7 @@ function hutang($data2) {
 function hapus($no) {
     global $conn;
 
-    mysqli_query($conn, "DELETE FROM tabel WHERE No = $no");
+    mysqli_query($conn, "DELETE FROM tabungan WHERE No = $no");
 	return mysqli_affected_rows($conn);
 }
 
