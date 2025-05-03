@@ -1,7 +1,7 @@
 <?php 
 
 	//koneksi
-	$connect = mysqli_connect('localhost', 'id20450470_moneykuncay', '0343Ahub6453@','id20450470_keuangan');
+	$connect = mysqli_connect('localhost', 'id20450470_moneykuncay', '','id20450470_keuangan');
 
 	function query($query) {
 

@@ -17,5 +17,5 @@
 					alert('Data Failed to Delete');
 					document.location.href = 'index.php';
 				</script>";
-		}		
+		}
 ?>
